@@ -12,7 +12,7 @@ Main::~Main() {
 }
 
 int Main::printout() {
-    std::cout << Test_VERSION_MAJOR << '.' << Test_VERSION_MINOR << std::endl;
+    std::cout << Test_VERSION_MAJOR << '.' << Test_VERSION_MINOR << '.' << Test_VERSION_PATCH << std::endl;
 
     return 0;
 }

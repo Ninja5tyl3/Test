@@ -18,7 +18,7 @@ public:
     /** Default destructor */
     virtual ~IOManager();
 
-    JSONParser(std::string filePath)
+    int TextParser(std::string FilePath);
 
 protected:
 private:
