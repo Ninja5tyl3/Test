@@ -4,6 +4,6 @@ script: cmake .
 compiler: gcc
 os: linux
 branches:
-	only:
-		- master
-		- dev
+  only:
+    - master
+    - dev
