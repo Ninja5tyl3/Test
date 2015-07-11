@@ -4,6 +4,6 @@ script: ./script.sh
 compiler: gcc
 os: linux
 branches:
-	only:
-		- master
-		- dev
+     only:
+           - master
+           - dev
