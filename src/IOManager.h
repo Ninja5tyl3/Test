@@ -1,15 +1,12 @@
 #ifndef IOMANAGER_H
 #define IOMANAGER_H
 
-#include <boost/foreach.hpp>
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/json_parser.hpp>
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <string>
 #include <vector>
+#include <sys/stat.h>
 
 class Main {
 public:
@@ -19,6 +16,8 @@ public:
     virtual ~IOManager();
 
     int TextParser(std::string FilePath);
+
+    bool fileCheck(const std::string& name);
 
 protected:
 private:
