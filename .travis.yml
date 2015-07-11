@@ -1,6 +1,6 @@
 sudo: required
 language: cpp
-script: cmake .
+script: ./script.sh
 compiler: gcc
 os: linux
 branches:
