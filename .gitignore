@@ -41,3 +41,4 @@ cmake_install.cmake
 # Local
 build
 createcppclass.sh
+include/yaml-cpp

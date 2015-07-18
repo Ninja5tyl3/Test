@@ -20,10 +20,15 @@ include_directories("${PROJECT_BINARY_DIR}")
 # all files to be compiled
 
 set(HEADER_FILES
-    include/Main.h)
+    include/Main.h
+    include/PerlinNoise.h
+    include/PPM.h
+)
 
 set(SOURCE_FILES
     src/Main.cpp
+    src/PerlinNoise.cpp
+    src/PPM.cpp
 )
 
 set(COMPILE_FILES
@@ -42,7 +47,7 @@ macro (do_test arg result)
 endmacro (do_test)
 
 # does the application run
-add_test(TestRuns Test 0.0.1)
+#add_test(TestRuns Test 0.0.1)
 
 # build a CPack driven installer package
 include(InstallRequiredSystemLibraries)
