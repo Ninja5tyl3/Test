@@ -9,8 +9,6 @@ public:
     /** Default destructor */
     virtual ~Main();
 
-    int printout();
-
 protected:
 private:
 };

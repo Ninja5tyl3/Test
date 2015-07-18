@@ -19,10 +19,36 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 # all files to be compiled
 
+set(HEADER_FILES
+    include/Main.h)
+
 set(SOURCE_FILES
     src/Main.cpp
-    src/Main.h
+)
+
+set(COMPILE_FILES
+    ${HEADER_FILES}
+    ${SOURCE_FILES}
 )
 
 # Add the executable
-add_executable(Test ${SOURCE_FILES})
+add_executable(Test ${COMPILE_FILES})
+
+#define a macro to simplify adding tests, then use it
+macro (do_test arg result)
+  add_test (TestComp${arg} Test ${arg})
+  set_tests_properties (TestComp${arg}
+    PROPERTIES PASS_REGULAR_EXPRESSION ${result})
+endmacro (do_test)
+
+# does the application run
+add_test(TestRuns Test 0.0.1)
+
+# build a CPack driven installer package
+include(InstallRequiredSystemLibraries)
+set(CPACK_RESOURCE_FILE_LICENSE
+  "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+set(CPACK_PACKAGE_VERSION_MAJOR "{Test_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "{Test_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "{Test_VERSION_PATCH}")
+include(CPack)
