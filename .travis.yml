@@ -5,5 +5,14 @@ compiler: gcc
 os: linux
 branches:
   only:
-    - master
-    - dev
+  - master
+  - dev
+deploy:
+  provider: biicode
+  user: Ninja5tyl3
+  password:
+    secure: kwvFgq29+U81brtQkT9sN1mQ6x6M1nS72vEM0X2iJ/eYi+WjZpokFwrBd6axqUr8LzCENmvcSUHOm46icai7Y6vZIZj8Rx1af9nHyCugLgF4wTFCh2q9yypeHyUEkQg2R5geJSg1xVcvVtAWKs/xgFFGYyvjCewa1EZU8mN5jsIN0r9qqvem0yh3A+RN9yViLZ9cuo8CLQUCTAJ5qMkFFDqO6uCKH3QLxcdY8R5jVbz1pSYokvCsCiVledvV2aylR8IYa6DVXhrVKRVvMb6IG4ntFxEoAmwN3QsWFU9o0Ox7vw8cV617x9CXQFuFSELOyCeslozCF6nTMvnYzqPAPvtvhFg8sTREgORcuYiKLdV18HNupTxN2CtxthnNUTggOH4y2OzcOaeCH9uz1eMzZpBhYVD1cPJJ3SAxHbkoPzw/KcPfVOB0bWjZ6drH59GwmoHAwOMTfeBWIMzibB6j63z6+gJM114KiztC41sNE0DXKBBvNX2x0GcRmLxsvMrtS27HSoaISAnvGOe01ba6x8WurdYczHSj+r4yQdTfIqD5Yscbaa1O2HJQ1n/arCvJnuUyMyHBWKiGcSzWfcpjYL91Fn7j2OHXb/Gt6bA9/Xb7teCy3AQPo+z2SWj8QaC2ye3FHYx8UQguStZqT6gjMzEnqC/iJi/VI7J4EUaWozs=
+  on:
+    tags: true
+    repo: Ninja5tyl3/Test
+    branch: master

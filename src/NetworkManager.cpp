@@ -1,5 +1,5 @@
-#include "NetworkManager.h"
-#include "errors.h"
+#include "../include/NetworkManager.h"
+#include "../include/errors.h"
 
 NetworkManager::NetworkManager() {
 

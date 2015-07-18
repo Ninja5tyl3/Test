@@ -1,5 +1,5 @@
-#include "Main.h"
-#include "TestConfig.h"
+#include "../include/Main.h"
+#include "../include/TestConfig.h"
 
 #include <iostream>
 
@@ -11,7 +11,7 @@ Main::~Main() {
 
 }
 
-int Main::printout() {
+int printout() {
     std::cout << Test_VERSION_MAJOR << '.' << Test_VERSION_MINOR << '.' << Test_VERSION_PATCH << std::endl;
 
     return 0;
@@ -20,7 +20,7 @@ int Main::printout() {
 int main() {
     int status;
 
-    status = Main::printout();
+    status = printout();
 
     return status;
 }
